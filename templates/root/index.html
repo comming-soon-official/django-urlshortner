@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <title>Url Shortner</title>
+</head>
+<body>
+  <!-- <form action="" method="POST">       
+        {% csrf_token %} 
+        <div class="row g-3 align-items-center" style="padding-top: 30px;">
+            <div class="col-auto">
+              <label for="inputPassword" class="col-form-label">Enter Url</label>
+            </div>
+            <div class="col-auto">
+              <input type="text" name="full_url" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-auto">
+              <span id="passwordHelpInline" class="form-text">
+                Enter a Valid Url
+              </span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-dark">Submit</button>
+      </form>-->
+
+      <style>   
+        Body {  
+          font-family: Calibri, Helvetica, sans-serif;  
+          background-color:white;  
+        }  
+        button {   
+               background-color:gray;   
+               width: 100%;  
+                color: black;   
+                padding: 15px;   
+                margin: 10px 0px;   
+                border: 2px solid black;   
+                cursor: pointer;  
+                transition-duration: 0.4s; 
+                 }   
+         form {   
+                border: 3px solid #f1f1f1;   
+            }   
+         input[type=text], input[type=password] {   
+                width: 100%;   
+                margin: 8px 0;  
+                padding: 12px 20px;   
+                display: inline-block;   
+                border: 2px solid black;   
+                box-sizing: border-box;   
+            }  
+         button:hover {   
+            background-color:black; /* Green */
+                color:white;
+         } 
+                
+             
+         .container {   
+                padding: 25px;   
+                background-color: white;  
+            }
+
+
+        </style>   
+        </head>    
+        <body>    
+            <center> <h1> Url Shortner </h1> </center>   
+            <form action="" method="POST">
+                {% csrf_token %} 
+                <div class="container">   
+                    <label>Username : </label>   
+                    <input type="text" placeholder="Enter Url" name="full_url" required>  
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                
+                </div>   
+            </form>
+      <p>
+            
+            <div style="background: ghostwhite; 
+            font-size: 20px; 
+            padding: 10px; 
+            border: 1px solid lightgray; 
+            margin: 10px;">
+            Old Url = {{ full_url }}
+            </div>
+
+       
+
+      </p>
+
+      <p>
+        <div style="background: ghostwhite; 
+        font-size: 20px; 
+        padding: 10px; 
+        border: 1px solid lightgray; 
+        margin: 10px;">
+        New Url = {{ short_url }}
+        </div>
+        
+      </p>
+ <h1>
+ </h1>   
+</body>
+</html>
